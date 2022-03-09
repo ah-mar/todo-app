@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+  display: flex;
+  background-color: #ff8a65;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  min-height: 10vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.sidebar,
+main {
+  border: 1px solid #ccc;
+  min-height: 90vh;
+}
+
+.projects {
+  background-color: #fbe9e7;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.project-title {
+  margin-bottom: 10px;
+}
+
+.project {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.project:hover {
+  font-weight: bold;
+}
+
+.categories {
+  padding: 10px;
+}
+
+.category-title {
+  margin-bottom: 10px;
+}
+
+.category {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.project:hover {
+  font-weight: bold;
+}
+
+.main {
+  padding: 25px;
+}
+
+.task-container {
+  display: flex;
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  color: #424242;
+  margin-bottom: 20px;
+}
+
+.task {
+  padding: 10px 20px;
+}
+
+.button-group {
+  padding: 10px 5px;
+  /*   border-right: 1px solid #e0e0e0; */
+}
+
+.action-btn {
+  background-color: white;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-right: 1px solid #e0e0e0;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .show {
+    display: initial;
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+  }
+
+  .main {
+    grid-column: 1/3;
+  }
+}
+
+.task-form {
+  /*   height: 30px; */
+  display: flex;
+  border: 2px solid #ff8a65;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  width: 70%;
+  padding: 10px;
+  font-family: inherit;
+  background-color: white;
+  border: 0;
+  border-right: 1px solid #ff8a65;
+  display: block;
+}
+.add-new-task-btn {
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  background-color: white;
+  border: 1px solid #ff8a65;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.add-new-task-btn:hover {
+  font-weight: bold;
+}
+
+/* in React, have a state varaible for show sidebar, which will conditionally render css class of show/hide */
+
+/* Add Task CSS */
+
+.modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task-form {
+  background-color: white;
+  padding: 25px;
+  min-width: 350px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form-header {
+  margin-bottom: 1em;
+  color: #ff8a65;
+}
+
+input,
+select {
+  width: 100%;
+  font-family: inherit;
+  padding-block: 5px;
+  border: none;
+  /*   font-size: 0.9rem; */
+  color: #333;
+  border: none;
+}
+
+label {
+  display: block;
+  color: #777;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.task-button {
+  padding: 10px 25px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 30%;
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+.form-buttons-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.category-btn {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.add-project-form {
+  display: flex;
+}
+
+.add-project-input {
+  width: 70%;
+  padding: 10px;
+}
+
+.add-project-button {
+  width: 30%;
+  background-color: white;
+  border: none;
+  border-left: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.project-btn {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ccc;
+  background-color: #fbe9e7;
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  font-weight: bold;
+  background-color: #fbe9e7;
+}
