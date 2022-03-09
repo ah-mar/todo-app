@@ -2,6 +2,8 @@
 
 A todo-app made with React, Vanilla CSS and Firebase firestore database as backend. The app is based on the GTD philosophy. Task can be created, edited, deleted and completed. The task are organized by categories and projects.
 
+The app need firebase app config and firestore firebase to function.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
